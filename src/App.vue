@@ -3,11 +3,14 @@ import axios from "axios";
 import {store} from "./data/store";
 import CardsContainer from "./components/CardsContainer.vue";
 import Footer from "./components/Footer.vue";
+import Header from "./components/Footer.vue"
+
 export default{
   name: "App",
   components:{
     CardsContainer,
-    Footer
+    Footer,
+    Header
   },
   methods:{
     getApi(){
@@ -25,6 +28,7 @@ export default{
 
 <template>
   <div class="container">
+    <Header/>
     <CardsContainer/>
     <Footer/>
   </div>
