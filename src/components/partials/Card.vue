@@ -20,5 +20,7 @@ export default {
   text-align: center;
   margin-bottom: 20px;
   border: 1px solid black;
+  background-color: orange;
+  color: white;
 }
 </style>
