@@ -1,12 +1,4 @@
-<template>
-  <div class="page-wrapper">
-    <div class="container">
-      <Header/>
-      <CardsContainer/>
-      <Footer/>
-    </div>
-  </div>
-</template>
+
 
 <script>
 import axios from "axios";
@@ -34,6 +26,17 @@ export default{
   }
 }
 </script>
+
+<template>
+  <div class="page-wrapper">
+    <div class="container">
+      <Header/>
+      <CardsContainer/>
+      <Footer/>
+    </div>
+  </div>
+</template>
+
 
 <style lang="scss">
 @import "bootstrap/scss/bootstrap.scss";

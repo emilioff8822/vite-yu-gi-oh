@@ -3,7 +3,7 @@
     Yu-Gi-Oh API
   </div>
   <header class="app-header">
-    <h1>Card Browser</h1>
+    <h1>Cards Found : vedi infondo</h1>
   </header>
 </template>
 
