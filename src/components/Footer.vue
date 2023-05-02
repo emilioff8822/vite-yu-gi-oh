@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <p class="text-center my-5">Sono state caricate {{ store.resultArray.length }} carte</p>
+  <h2 class="text-center my-5">Sono state caricate {{ store.resultArray.length }} carte</h2>
 </template>
 
 <style>

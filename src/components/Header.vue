@@ -1,4 +1,7 @@
 <template>
+  <div class="header-top">
+    Yu-Gi-Oh API
+  </div>
   <header class="app-header">
     <h1>Card Browser</h1>
   </header>
@@ -16,5 +19,17 @@ export default {
   color: white;
   padding: 1rem;
   text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-top {
+  background-color: white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 </style>
