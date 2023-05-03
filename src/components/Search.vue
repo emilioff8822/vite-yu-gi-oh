@@ -1,12 +1,14 @@
 <template>
   <div class="search-container">
-    <input type="text" v-model="searchText" @input="emitSearch" placeholder="Cerca" />
-    <select v-model="selectedType" @change="emitType">
+    <input type="text" v-model="searchText" placeholder="Cerca" />
+    <select v-model="selectedType">
       <option value="">Seleziona un tipo</option>
       <option value="Normal Monster">Monster</option>
       <option value="Spell Card">Spell Card</option>
       <option value="Trap Card">Trap Card</option>
     </select>
+    <button @click="emitSearch">Search</button>
+    <button @click="reset">Reset</button>
   </div>
 </template>
 
@@ -22,9 +24,12 @@ export default {
   methods: {
     emitSearch() {
       this.$emit("search-input", this.searchText);
-    },
-    emitType() {
       this.$emit("type-selected", this.selectedType);
+    },
+    reset() {
+      this.searchText = "";
+      this.selectedType = "";
+      this.$emit("reset-search");
     },
   },
 };
