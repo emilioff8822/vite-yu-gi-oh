@@ -29,12 +29,12 @@ export default {
     reset() {
       this.searchText = "";
       this.selectedType = "";
+      this.emitSearch(); // Aggiunto evento type-selected per aggiornare il tipo correttamente
       this.$emit("reset-search");
     },
   },
 };
 </script>
-
 <style scoped>
 .search-container {
   display: flex;

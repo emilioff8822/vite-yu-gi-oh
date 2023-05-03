@@ -2,7 +2,7 @@
   <div id="app" class="page-wrapper">
     <div class="container">
       <Header />
-      <Search @search-input="updateSearch" @type-selected="updateType" />
+      <Search @search-input="updateSearch" @type-selected="updateType" @reset-search="resetSearch" />
       <CardsContainer />
       <Footer />
     </div>
@@ -26,7 +26,10 @@ export default {
   },
   methods: {
     getApi(searchText = "", type = "") {
-      const url = `${store.apiUrl}?fname=${searchText}&type=${type}&num=100&offset=0`;
+      let url = `${store.apiUrl}?num=100&offset=0&type=${type}`;
+      if (searchText !== "") {
+        url += `&fname=${searchText}`;
+      }
       axios.get(url).then((result) => {
         store.resultArray = result.data.data;
       });
@@ -38,6 +41,11 @@ export default {
     updateType(type) {
       this.currentType = type;
       this.getApi(this.currentSearch, type);
+    },
+    resetSearch() {
+      this.currentSearch = "";
+      this.currentType = "";
+      this.getApi(this.currentSearch, this.currentType);
     },
   },
   data() {
