@@ -29,7 +29,7 @@ export default {
     reset() {
       this.searchText = "";
       this.selectedType = "";
-      this.emitSearch(); // Aggiunto evento type-selected per aggiornare il tipo correttamente
+      this.emitSearch();
       this.$emit("reset-search");
     },
   },
