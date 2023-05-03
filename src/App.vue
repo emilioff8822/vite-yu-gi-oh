@@ -15,7 +15,7 @@ export default{
   },
   methods:{
     getApi(){
-      axios.get(store.apiUrl)
+      axios.get(store.apiUrl,)
       .then(result => {
         store.resultArray = result.data.data;
       })

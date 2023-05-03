@@ -14,15 +14,26 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
       searchText: "",
       selectedType: "",
-      cardTypes: [
-        // Aggiungi i tipi di carte qui
-      ],
+      cardTypes: [],
     };
+  },
+  methods: {
+    getCardTypes() {
+      const apiUrl = "https://db.ygoprodeck.com/api/v7/cardinfo.php";
+      axios.get(apiUrl).then((response) => {
+        this.cardTypes = response.data.type;
+      });
+    },
+  },
+  mounted() {
+    this.getCardTypes();
   },
 };
 </script>

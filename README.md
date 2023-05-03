@@ -1,7 +1,4 @@
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Creo un nuovo componente Search.vue nella cartella components.
+Nel file Search.vue, aggiungo un input per la ricerca e una casella di selezione per il tipo di carta.
+Utilizzo $emit per inviare l'input di ricerca e il valore della casella di selezione al componente padre (App.vue).
+Modifico App.vue per ricevere gli eventi emessi dal componente figlio e aggiorna la chiamata API in base ai valori ricevuti.
